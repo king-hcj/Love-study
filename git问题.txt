@@ -1,4 +1,0 @@
-重装系统后github的各项配置：https://www.jianshu.com/p/14ae9b3146db
-github使用教程（重装系统后遇到问题该文章帮我解决了）：https://www.cnblogs.com/hackerl/p/3145565.html
-git/github学习笔记：https://www.cnblogs.com/fnng/archive/2011/08/25/2153807.html
-git config http.postBuffer 52428800：文件大于4M
