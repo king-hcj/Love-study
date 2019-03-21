@@ -39,7 +39,9 @@
 手机详情失败类型：
 (```)"SELECT distinct `error_msg_text` FROM `zzbitem`.`mdetail_log` where `status` =2 AND `optime`  BETWEEN '2018-10-20 14:00:00' and '2018-12-20 23:59:59'";(```)： "count(distinct `error_msg_text`)": 1165
 
+
 [
+
     {
         "error_msg_text": "请确认是否是咸鱼宝贝，咸鱼宝贝不支持手机详情 > [isv.invalid-parameters:cateogry_not_exist] "
     },
@@ -211,7 +213,6 @@
     {
         "error_msg_text": "发布手机详情失败 > [GoodsEditAction quickEditItem fail] 系统错误，请稍后再试"
     },
-
     {
         "error_msg_text": "发布手机详情失败 > [GoodsEditAction quickEditItem fail] 分销产品撤回，不允许上架"
     },
