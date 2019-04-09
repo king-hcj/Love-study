@@ -119,13 +119,12 @@ JS解析：
 
 >因为F、B和α都是未知的，要把这么多未知项都求出来显然很不容易。所以就需要增加一些附加的约束，通常，这种约以TriMap的形式给出。TriMap就是三元图，它是和待分割图像同等大小的一张图，但图中的像素只有三个取值，0、128（左右）和255。
 
->>来源：[自然抠图算法：以经典的贝叶斯抠图为例（Bayesian Matting）](https://blog.csdn.net/baimafujinji/article/details/72863106?utm_source=gold_browser_extension)
+>>来源：[自然抠图算法：以经典的贝叶斯抠图为例（Bayesian Matting）](https://blog.csdn.net/baimafujinji/article/details/72863106?utm_source=gold_browser_extension)   
 
-[天干物燥，小心抠图 —— A journey of matting(知乎)](https://zhuanlan.zhihu.com/p/27852081?utm_source=itdadao&utm_medium=referral)
-
-[Jue Wang Computer Graphics and Vision Researcher](http://www.juew.org/default.htm)
-
-[百度AI人像分割(免费使用)](http://ai.baidu.com/tech/body/seg)
+相关文章：   
+1. [天干物燥，小心抠图 —— A journey of matting(知乎)](https://zhuanlan.zhihu.com/p/27852081?utm_source=itdadao&utm_medium=referral)
+2. [Jue Wang Computer Graphics and Vision Researcher](http://www.juew.org/default.htm)
+3. [百度AI人像分割(免费使用)](http://ai.baidu.com/tech/body/seg)
 
 # 小技巧
 1. 多行文本转数组:类似下面这样，带有换行符，需要转换成在SQL IN中可使用的数组
