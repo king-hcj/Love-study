@@ -19,6 +19,32 @@ React 是基础框架，是一套基础设计实现理念，开发者不能直�
 
 因为React 基础框架与React.js框架是同时出现、同时进化发展的，这就造成了React基础框架的基本概念、设计思想都是在React.js的相关文档中描述的。后来，Facebook推出了React Native 后，也没有把React的相关概念文档从React.js文档中分离出来。这就导致出现了学React Native 要去看React.js文档，说React Native 不时会说到React.js的情况。
 
+使用React.Children.map而不是props.children.map遍历：   
+React.Children.map的实现考虑到 props.children 可能是一个数组或一个对象。
+
+key值的作用：   
+一列节点中的一个发生了改变，React并没有什么好方法来处理这个问题。循环新旧两个列表，并找出不同是React唯一的处理方法。但是，有一个可以把这个算法的复杂度降低的办法。那就是我们在生成一列节点的时候给每一个节点上添加一个key。这个key只需要在这一列节点中唯一，不需要全局唯一。   
+
+ref:   
+经常误解的是，您需要使用类组件才能使用 ref ，但 ref 也可以通过利用 JavaScript 中的 闭包 与 功能组件functional components一起使用。例如：
+```
+function CustomForm ({handleSubmit}) {
+  let inputElement
+  return (
+    <form onSubmit={() => handleSubmit(inputElement.value)}>
+      <input
+        type='text'
+        ref={(input) => inputElement = input} />
+      <button type='submit'>Submit</button>
+    </form>
+  )
+}
+```
+
+文章力荐：   
+1.[React 常见的面试题](https://blog.csdn.net/sinat_17775997/article/details/69938720)
+
+
 
 # HTTP协议原理+实践 Web开发工程师必学
 [HTTP协议原理+实践 Web开发工程师必学](https://coding.imooc.com/class/225.html)
@@ -73,6 +99,13 @@ JS解析：
 2. [ajax跨域，这应该是最全的解决方案了](https://segmentfault.com/a/1190000012469713)
 3. [axios全攻略](https://ykloveyxk.github.io/2017/02/25/axios%E5%85%A8%E6%94%BB%E7%95%A5/#more)
 4. [前端｜浅谈fetch](https://www.jianshu.com/p/35123b048e5e)
+
+# React Native
+1. [看看React Native和React.js之间的区别](https://baijiahao.baidu.com/s?id=1615907407534131792&wfr=spider&for=pc)
+2. [React Native运行原理解析](https://blog.csdn.net/xiangzhihong8/article/details/52623852)
+3. [React、React Native面试题](https://blog.csdn.net/qizhenshuai/article/details/78202472)
+4. [CSS3 Flexbox 口诀](https://weibo.com/1712131295/CoRnElNkZ?ref=collection&type=comment#_rnd1554724921355)
+   
 
 # 抠图技术
 >语义分割重在对每个像素的语义理解，将相同语义的像素分割为同一个部分，得到的结果就是若干个块状，至于块与块之间是否衔接自然则不考虑。抠图只将图片分成前景和背景两块，目的是拿到前景，好的抠图算法会对于头发等细节的处理效果比较精确。分割和抠图的另一个重要区别是分割是返回像素分类结果，分类结果是整型；而抠图返回的是属于前景或背景的概率p，在前景与背景交互区域会产生渐变的效果，使得抠图更加自然。
