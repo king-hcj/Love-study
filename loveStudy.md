@@ -42,7 +42,23 @@ function CustomForm ({handleSubmit}) {
 ```
 
 文章力荐：   
-1.[React 常见的面试题](https://blog.csdn.net/sinat_17775997/article/details/69938720)
+1. [React 常见的面试题](https://blog.csdn.net/sinat_17775997/article/details/69938720)
+2. [理解 React，但不理解 Redux，该如何通俗易懂的理解 Redux？](https://www.zhihu.com/question/41312576)
+
+# 图表库 AntV - G2
+
+1. [数据驱动的高交互可视化图形语法 AntV - G2](https://www.oschina.net/p/antv-g2)
+```
+  import G2 from '@antv/g2';   
+  const chart = new G2.Chart({   
+    container: 'c1',   
+    width: 600,   
+    height: 300   
+  });
+```
+  
+2. [G2 文档:G2 API 和教程文档](https://www.yuque.com/antv/g2-docs)
+
 
 
 
@@ -105,6 +121,10 @@ JS解析：
 2. [React Native运行原理解析](https://blog.csdn.net/xiangzhihong8/article/details/52623852)
 3. [React、React Native面试题](https://blog.csdn.net/qizhenshuai/article/details/78202472)
 4. [CSS3 Flexbox 口诀](https://weibo.com/1712131295/CoRnElNkZ?ref=collection&type=comment#_rnd1554724921355)
+5. [IOS与安卓的区别](https://blog.csdn.net/elzza/article/details/78878806)
+6. [iOS与安卓的区别 浅谈ios为什么比安卓流畅](https://www.jianshu.com/p/372034fc2f2e)：
+>>>有了优先级的关系，有了GPU加速的影响，还有两个系统各自编程以及机制的问题，似乎已经可以说明为什么iOS相比Android更为流畅的原因，但最终还有一个问题是就是应用程序。
+7. [iOS 开发是否要采用 React Native?](https://www.jianshu.com/p/17cfac53578a)
    
 
 # 抠图技术
