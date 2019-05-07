@@ -1,0 +1,103 @@
+.Calc {  /*计算器界面*/
+  margin: 20px auto;
+  text-align: center;
+  font-size: 10px;
+  width: 400px;
+  height:600px;
+  border:1px solid #ccc;
+  border-radius: 50px 50px 30px 30px;
+  box-shadow:10px 10px 5px #666;
+}
+
+.Calc .calcInput{  /*输入框*/
+  margin: 20px auto;
+  text-align: center;
+  width: 30%;
+  height:3em;
+  border:1px solid;
+  border-radius: 3px;
+  font-size: 1em;
+  background-color: #eff;
+}
+
+.Calc .calcInput:focus{
+  background-color:white;
+}
+
+.Calc .showResult{   /*结果展示面板*/
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:1px solid blue;
+  border-radius: 5px;
+  width: 70%;
+  height: 80px;
+}
+
+.Calc .showResult p{
+  font-size: 2em;
+}
+
+.Calc .operator{  /*运算符选择框样式*/
+  margin: 0 2px;
+  width: 10%;
+  border:2px solid;
+}
+hr {
+  width: 80%;
+  margin-bottom: 30px;
+}
+textarea{
+  text-align: center;
+  resize: none;
+  border-radius: 3px;
+}
+
+.Tab{
+  text-align: left;
+  font-size: 10px;
+  border:1px solid #ccc;
+  border-radius: 5px 5px 3px 3px;
+  box-shadow:1px 1px .5px #666;
+}
+ul{
+  list-style-type:none;
+}
+li{
+  margin: 0 10px;
+  display: inline-block;
+  font-size: 1.2em;
+  padding: .5em;
+  border: 1px solid #ccc;
+  background-color: #FFF68F;
+}
+
+li:hover{
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.showReverse{
+  margin: 20px auto;
+  width: 80%;
+  height:3em;
+  border:1px solid blue;
+  border-radius: 3px;
+  font-size: 1em;
+  background-color: #eff;
+}
+
+#imply{
+  display: none;
+  margin: 0 auto;
+  font-size: 1.5em;
+  border-radius: 3px;
+  width: 80%;
+  background-color: #FF82AB;
+}
+
+span{
+  font-size: 2em;
+  font-weight: bold; 
+}
