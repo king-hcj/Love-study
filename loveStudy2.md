@@ -158,7 +158,7 @@ module.exports = idx;
 
 9. [React Infinite Scroller](https://cassetterocks.github.io/react-infinite-scroller/)
 
-10. [DropzoneJS](https://www.dropzonejs.com/#)、[Ant Motion ](https://motion.ant.design/index-cn)
+10. [DropzoneJS](https://www.dropzonejs.com/#) | [Ant Motion ](https://motion.ant.design/index-cn) | [fullPage全屏滚动](https://alvarotrigo.com/fullPage/)
 
 11. [Less 中文网](http://lesscss.cn/)
 
@@ -166,6 +166,8 @@ module.exports = idx;
 
 
 # 技巧技法
+## git
+1. 已提交过的代码，被删除，git status会是绿色，相当于已经add过了，会被下一次commit和push带着自动提交远程
 ## JS
 1. [js判断对象是否为空对象的几种方法](https://blog.csdn.net/qq_38627581/article/details/77353015)
 2. [Node.js 中文文档](http://nodejs.cn/api/synopsis.html) | [Node.js 英文文档](https://nodejs.org/en/docs/)
@@ -187,19 +189,26 @@ module.exports = idx;
     }
 ```
 
+## 其他
+1. [Chrome浏览器百度云倍速播放](https://blog.csdn.net/u013044310/article/details/80444695)：
+```
+videojs.getPlayers("video-player").html5player.tech_.setPlaybackRate(1.5)
+```
+
 # 代码规范/规约
 1. [EditorConfig](https://editorconfig.org/): 当多人团队进行一个项目开发时，每个人可能喜欢的编辑器不同，有人喜欢Webstrom、有人喜欢sublime、还有人喜欢Hbuilder。这个时候，问题便迎面而来，如何使使用不同编辑器的开发者能够轻松惬意的遵守最基本的代码规范呢？   
 EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs.
 2. [ESLint](https://cn.eslint.org/)+[Prettier](https://prettier.io/)
 
-
 # 个人学习规划/学习视频书籍目录整理
 ## 通用课程(数据结构、算法、网络)
-1. [专为程序员设计的线性代数课程](https://coding.imooc.com/class/260.html)
-2. [学习算法思想 修炼编程内功](https://coding.imooc.com/class/71.html)
-3. [玩转数据结构 从入门到进阶](https://coding.imooc.com/class/207.html)
-4. [玩转算法面试 从真题到思维全面提升算法思维](https://coding.imooc.com/class/82.html)
-5. [慕课算法讲师推荐：liuyubobobo](http://www.imooc.com/t/108955)
+1. [快速上手Linux 玩转典型应用](https://coding.imooc.com/class/154.html)
+2. [慕课Java就业班](https://class.imooc.com/newjava)
+3. [专为程序员设计的线性代数课程](https://coding.imooc.com/class/260.html)
+4. [学习算法思想 修炼编程内功](https://coding.imooc.com/class/71.html)
+5. [玩转数据结构 从入门到进阶](https://coding.imooc.com/class/207.html)
+6. [玩转算法面试 从真题到思维全面提升算法思维](https://coding.imooc.com/class/82.html)
+7. [慕课算法讲师推荐：liuyubobobo](http://www.imooc.com/t/108955)
 ## 前端
 1. Node.js:
    1. [Node.js入门到企业Web开发中的应用](https://coding.imooc.com/class/146.html)
@@ -223,6 +232,7 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
 ## 移动端
 1. [新版React Native+Redux打造高质量上线App](https://coding.imooc.com/class/304.html)
 2. [Flutter从入门到进阶 实战携程网App](https://coding.imooc.com/class/321.html)
+3. [Socket网络编程进阶与实战](https://coding.imooc.com/class/286.html)
 ## 后端
 1. [Google资深工程师深度讲解Go语言](https://coding.imooc.com/class/180.html)
 
