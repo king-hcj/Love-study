@@ -22,6 +22,32 @@
       - Redirect to={temObject}
       - Notification
       - AnchorButton：scrollTop/scrollBottom
+5. 项目操作
+   1. git命令
+     - git remote -v
+     - git remote add root http://......git
+     - git remote -v
+     - git status
+     - git pull root master
+     - git branch -a
+     - git checkout -- package.json
+     - git checkout --yarn.lock
+     - rm -rf package - lock.json
+     - rm -rf node_modules/
+     - yarn install
+     - git add .
+     - git commit -m'XXXXXX'
+     - git push
+     - git pull root master
+     - git log
+     - git push
+   2. 项目部署
+     - 地址：webpack.XX.org(Jenkins)
+     - PR代码
+     - yarn merge:root test
+     - yarn deploy (test)
+     - yarn merge:root prod
+     - yarn deploy prod
 
 
 ## react-dropzone上传文件类型支持：
@@ -75,18 +101,18 @@ const HelloMessage = (props)=>(
 [Mac下终端配置（item2 + oh-my-zsh + solarized配色方案）](https://www.cnblogs.com/weixuqin/p/7029177.html)
 
 
-3. [idx使用](https://github.com/facebookincubator/idx):现在多使用'?.'写法(?.是一个整体，相当于一个运算符)，可以不使用idx[@babel/plugin-proposal-optional-chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining)   
+3. [idx使用](https://github.com/facebookincubator/idx):现在多使用'?.'写法(?.是一个整体，相当于一个运算符)，可以不使用idx。新的'？.'写法：[@babel/plugin-proposal-optional-chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining)   
 示例： 
    1. obj?.foo.bar?.baz
    2. obj?.['foo']?.bar?.baz
    3. 
-```
-      function test() {
-        return 42;
-      }
-      test?.();
-```
-[idx源码](https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js)   
+      ```
+        function test() {
+          return 42;
+        }
+        test?.();
+      ```
+[idx源码链接](https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js)   
 ```
 function idx<Ti, Tv>(input: Ti, accessor: (input: Ti) => Tv): ?Tv {
   try {
@@ -112,9 +138,39 @@ module.exports = idx;
 
 4. [ console-importer](https://github.com/pd4d10/console-importer):在在 Dev Tools 里面来使用 npm 插件！
 
-# 技巧技法
-## JS
+5. [ Lodash-文档](https://www.lodashjs.com/)
+   1. omit 忽略值：
+      ```
+      var object = { 'a': 1, 'b': '2', 'c': 3 };   
+        _.omit(object, ['a', 'c']);   
+        // => { 'b': '2' }
+      ```
 
+6. curl
+>>>百科：cURL是一个利用URL语法在命令行下工作的文件传输工具，1997年首次发行。它支持文件上传和下载，所以是综合传输工具，但按传统，习惯称cURL为下载工具。cURL还包含了用于程序开发的libcurl。    
+      1. [curl 的使用](https://www.jianshu.com/p/f05bbd5007d9)
+      2. [Linux 命令行：cURL 的十种常见用法](https://blog.csdn.net/chenliaoyuanjv/article/details/79689028)
+      3. [curl 命令详解](https://www.jianshu.com/p/07c4dddae43a)
+
+7. [React DnD](http://react-dnd.github.io/react-dnd/about)
+
+8. [Moment.js 文档](http://momentjs.cn/docs/)
+
+9. [React Infinite Scroller](https://cassetterocks.github.io/react-infinite-scroller/)
+
+10. [DropzoneJS](https://www.dropzonejs.com/#) | [Ant Motion ](https://motion.ant.design/index-cn) | [fullPage全屏滚动](https://alvarotrigo.com/fullPage/)
+
+11. [Less 中文网](http://lesscss.cn/)
+
+12. [TypeScript英文文档](http://www.typescriptlang.org/index.html)|[中文](https://www.tslang.cn/index.html)
+
+
+# 技巧技法
+## git
+1. 已提交过的代码，被删除，git status会是绿色，相当于已经add过了，会被下一次commit和push带着自动提交远程
+## JS
+1. [js判断对象是否为空对象的几种方法](https://blog.csdn.net/qq_38627581/article/details/77353015)
+2. [Node.js 中文文档](http://nodejs.cn/api/synopsis.html) | [Node.js 英文文档](https://nodejs.org/en/docs/)
 ## HTML
 
 ## CSS
@@ -133,7 +189,53 @@ module.exports = idx;
     }
 ```
 
+## 其他
+1. [Chrome浏览器百度云倍速播放](https://blog.csdn.net/u013044310/article/details/80444695)：
+```
+videojs.getPlayers("video-player").html5player.tech_.setPlaybackRate(1.5)
+```
+
 # 代码规范/规约
 1. [EditorConfig](https://editorconfig.org/): 当多人团队进行一个项目开发时，每个人可能喜欢的编辑器不同，有人喜欢Webstrom、有人喜欢sublime、还有人喜欢Hbuilder。这个时候，问题便迎面而来，如何使使用不同编辑器的开发者能够轻松惬意的遵守最基本的代码规范呢？   
 EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs.
-2. [ESLint](https://cn.eslint.org/)+[Prettier](https://prettier.io/):
+2. [ESLint](https://cn.eslint.org/)+[Prettier](https://prettier.io/)
+
+# 个人学习规划/学习视频书籍目录整理
+## 通用课程(数据结构、算法、网络)
+1. [快速上手Linux 玩转典型应用](https://coding.imooc.com/class/154.html)
+2. [慕课Java就业班](https://class.imooc.com/newjava)
+3. [专为程序员设计的线性代数课程](https://coding.imooc.com/class/260.html)
+4. [学习算法思想 修炼编程内功](https://coding.imooc.com/class/71.html)
+5. [玩转数据结构 从入门到进阶](https://coding.imooc.com/class/207.html)
+6. [玩转算法面试 从真题到思维全面提升算法思维](https://coding.imooc.com/class/82.html)
+7. [慕课算法讲师推荐：liuyubobobo](http://www.imooc.com/t/108955)
+## 前端
+1. Node.js:
+   1. [Node.js入门到企业Web开发中的应用](https://coding.imooc.com/class/146.html)
+   2. [前端晋升全栈工程师必备课程 Node.js 从零开发web server博客项目](https://coding.imooc.com/class/320.html)
+2. 小程序：
+   1. [微信小程序入门与实战](https://coding.imooc.com/class/chapter/75.html#Anchor)
+3. Javascript:
+   1. [Javascript 设计模式系统讲解与应用](https://coding.imooc.com/class/255.html)
+   2. [基于TypeScript从零重构axios](https://coding.imooc.com/class/330.html)
+4. HTML/CSS:
+   1. [Web App用组件方式开发全站](https://coding.imooc.com/class/15.html)
+   2. [全面系统讲解CSS 工作应用+面试一步搞定](https://coding.imooc.com/class/164.html)
+   3. [所向披靡的响应式开发](https://coding.imooc.com/class/50.html)
+   4. [前端JavaScript面试技巧](https://coding.imooc.com/class/115.html)(视情)
+   5. [前端跳槽面试必备技巧](https://coding.imooc.com/class/129.html)(视情)
+5. React/Vue/Angular:
+   1. [React源码深度解析 高级前端工程师必备技能](https://coding.imooc.com/class/309.html)
+   2. [Vue2.5开发去哪儿网App 从零基础入门到实战项目](https://coding.imooc.com/class/203.html)
+6. Webpack:
+   1. [从基础到实战	手把手带你掌握新版Webpack4.0](https://coding.imooc.com/class/316.html)
+## 移动端
+1. [新版React Native+Redux打造高质量上线App](https://coding.imooc.com/class/304.html)
+2. [Flutter从入门到进阶 实战携程网App](https://coding.imooc.com/class/321.html)
+3. [Socket网络编程进阶与实战](https://coding.imooc.com/class/286.html)
+## 后端
+1. [Google资深工程师深度讲解Go语言](https://coding.imooc.com/class/180.html)
+
+## 文章
+1. [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
+2. [理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
