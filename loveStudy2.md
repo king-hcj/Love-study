@@ -166,7 +166,6 @@ module.exports = idx;
 
 13. [Next.js文档](http://nextjs.frontendx.cn/)
 
-
 # 技巧技法
 ## git
 1. 已提交过的代码，被删除，git status会是绿色，相当于已经add过了，会被下一次commit和push带着自动提交远程
@@ -202,6 +201,7 @@ debouncedFn = debounce(this.props.getProductItems, 500)
 //实际使用：
 this.debouncedFn(data)
 ```
+
 ## HTML
 
 ## CSS
