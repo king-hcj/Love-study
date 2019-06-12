@@ -164,6 +164,8 @@ module.exports = idx;
 
 12. [TypeScript英文文档](http://www.typescriptlang.org/index.html)|[中文](https://www.tslang.cn/index.html)
 
+13. [Next.js文档](http://nextjs.frontendx.cn/)
+
 
 # 技巧技法
 ## git
@@ -171,6 +173,35 @@ module.exports = idx;
 ## JS
 1. [js判断对象是否为空对象的几种方法](https://blog.csdn.net/qq_38627581/article/details/77353015)
 2. [Node.js 中文文档](http://nodejs.cn/api/synopsis.html) | [Node.js 英文文档](https://nodejs.org/en/docs/)
+3. 函数防抖运用:
+```
+A.js
+// 防抖实现
+export const debounce = (method, wait) => {
+  let timeout
+  // args为返回函数调用时传入的参数，传给method
+  return function (...args) {
+    let context = this
+    if (timeout) {
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(() => {
+      // args是一个类数组，所以使用fn.apply
+      // 也可写作method.call(context, ...args)
+      method.apply(context, args)
+    }, wait)
+  }
+}
+```
+---
+```
+B.js
+//调用：
+import { debounce } from A;
+debouncedFn = debounce(this.props.getProductItems, 500)
+//实际使用：
+this.debouncedFn(data)
+```
 ## HTML
 
 ## CSS
