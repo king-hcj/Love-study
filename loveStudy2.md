@@ -169,6 +169,11 @@ module.exports = idx;
 # 技巧技法
 ## git
 1. 已提交过的代码，被删除，git status会是绿色，相当于已经add过了，会被下一次commit和push带着自动提交远程
+2. Git文件名大小写敏感:
+   - 问题：本地代码运行ok，但是发现push上去的代码运行后报错，发现有个文件没注意大小写，于是重命名了该文件，发现git没有识别这个更改，不能提交
+   - 查看git 的设置:git config --get core.ignorecase
+   - git默认是不区分大小的，因此当你修改了文件名的大小写后，git并不会认为你有修改
+   - 更改设置解决:git config core.ignorecase false
 ## JS
 1. [js判断对象是否为空对象的几种方法](https://blog.csdn.net/qq_38627581/article/details/77353015)
 2. [Node.js 中文文档](http://nodejs.cn/api/synopsis.html) | [Node.js 英文文档](https://nodejs.org/en/docs/)
