@@ -112,6 +112,14 @@ const HelloMessage = (props)=>(
         }
         test?.();
       ```
+  4. || 和 ??区别
+      ```
+        let a = { b: { c: 0 } }
+        console.log(a?.b?.c || 33) // 33
+        console.log(a?.b?.c ?? 33) // 0
+        console.log(a?.c?.c || 22) // 22
+        console.log(a?.c?.c ?? 22) // 22
+      ```
 [idx源码链接](https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js)   
 ```
 function idx<Ti, Tv>(input: Ti, accessor: (input: Ti) => Tv): ?Tv {
@@ -206,7 +214,46 @@ debouncedFn = debounce(this.props.getProductItems, 500)
 //实际使用：
 this.debouncedFn(data)
 ```
-
+4. react如何产生随机不重复的key
+   - `<div key={+new Date() + Math.random()}>`
+   - 使用数组的索引
+   - 使用uuid：https://www.npmjs.com/package/uuid
+   - 使用uniqid：https://www.npmjs.com/package/uniqid
+   - Date.now()
+5. PureComponent使用(以选择框为例)
+   - 使用PureComponent，父组件传递的props不能全是对象和不变的量，否则会导致一直不更新(如果渲染用的checked来自对象，也应该传一个每次切换会变化为true和false的checked，即便不直接使用)
+   - 直接使用shouldComponentUpdate，nextProps和this.props进行对比的属性也不能来自对象(例如：return nextProps.item.checked !== this.props.item.checked，也会导致不更新)
+   - 函数组件:React.memo(...)是React v16.6引进来的新属性。它的作用和React.PureComponent类似，是用来控制函数组件的重新渲染的。React.memo(...) 其实就是函数组件的React.PureComponent。
+      ```
+      let TestC = (props) => {
+        return ( 
+            <div>
+            { props.count }
+            </>
+        )
+      }
+      TestC = React.memo(TestC);
+      ```
+  - PureComponent减少ES6的类组件的无用渲染;React.memo(...)减少函数组件的无用渲染
+  - 参考阅读
+     - [React v16.6.0: lazy, memo and contextType](https://reactjs.org/blog/2018/10/23/react-v-16-6.html)
+     - [react v16.6 动态 import，React.lazy()、Suspense、Error boundaries](http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html)
+     - [React新特性实例详解（memo、lazy、suspense、hooks）](http://react-china.org/t/react-memo-lazy-suspense-hooks/28789)
+6. Modal.confirm的onOk，可以把this传去，也可以写箭头函数
+```
+    Modal.confirm({
+      title: messages['common_0005'],
+      content: messages['prod_br_0008'],
+      onOk () {
+        _this.props.method()
+      },
+      <!-- onOk: () => {
+        this.props.method()
+      }, -->
+      onCancel () {
+      }
+    })
+```
 ## HTML
 
 ## CSS
