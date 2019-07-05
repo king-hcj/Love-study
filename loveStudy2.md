@@ -282,6 +282,9 @@ import FileDownload from 'react-file-download'
         console.log("Fetch错误:"+err);
     });
     ```
+
+9. [Element.scrollIntoView() 方法让当前的元素滚动到浏览器窗口的可视区域内](https://www.jianshu.com/p/32bef36a68a0)
+
 ## HTML
 
 ## CSS
