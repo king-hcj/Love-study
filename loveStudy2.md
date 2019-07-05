@@ -254,6 +254,34 @@ this.debouncedFn(data)
       }
     })
 ```
+
+7. 后端返回的 { responseType: 'blob' }数据，需要用react-file-download转化
+```
+import FileDownload from 'react-file-download'
+    this.props.actions.downloadPictures(this.props.selectedIds).then((res) => {
+      // 不能加if(res.data.success)的判断，因为返回的数据是blob，找不到res.data.success
+      FileDownload(res.data, 'images.zip')
+      this.props.cancelSelected()
+    })
+```
+
+8. Fetch请求可以直接在控制台调用
+    ```
+    let content = {some: 'content'}
+    // Post request with fetch
+    fetch('some-url', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'}
+      body: JSON.stringify(content)
+    }).then(status)
+    .then(json)
+    .then(function(data){
+        console.log("请求成功，JSON解析后的响应数据为:",data);
+    })
+    .catch(function(err){
+        console.log("Fetch错误:"+err);
+    });
+    ```
 ## HTML
 
 ## CSS
@@ -322,3 +350,4 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
 ## 文章
 1. [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
 2. [理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
+3. [Service Worker](https://www.jianshu.com/p/62338c038c42)
