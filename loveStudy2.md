@@ -172,7 +172,7 @@ module.exports = idx;
 
 12. [TypeScript英文文档](http://www.typescriptlang.org/index.html)|[中文](https://www.tslang.cn/index.html)
 
-13. [Next.js文档](http://nextjs.frontendx.cn/)
+13. [Next.js文档](http://nextjs.frontendx.cn/) | [Next.js英文文档](https://nextjs.org/)
 
 # 技巧技法
 ## git
@@ -239,7 +239,7 @@ this.debouncedFn(data)
      - [React v16.6.0: lazy, memo and contextType](https://reactjs.org/blog/2018/10/23/react-v-16-6.html)
      - [react v16.6 动态 import，React.lazy()、Suspense、Error boundaries](http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html)
      - [React新特性实例详解（memo、lazy、suspense、hooks）](http://react-china.org/t/react-memo-lazy-suspense-hooks/28789)
-6. Modal.confirm的onOk，可以把this传去，也可以写箭头函数
+6. Modal.confirm的onOk，可以把this传进去，也可以写箭头函数
 ```
     Modal.confirm({
       title: messages['common_0005'],
@@ -255,7 +255,7 @@ this.debouncedFn(data)
     })
 ```
 
-7. 后端返回的 { responseType: 'blob' }数据，需要用react-file-download转化
+7. 后端返回的 { responseType: 'blob' }数据，需要用react-file-download转化;
 ```
 import FileDownload from 'react-file-download'
     this.props.actions.downloadPictures(this.props.selectedIds).then((res) => {
@@ -263,6 +263,10 @@ import FileDownload from 'react-file-download'
       FileDownload(res.data, 'images.zip')
       this.props.cancelSelected()
     })
+```
+下载文件时，很可能需要写responseType,否则可能打不开文件：
+```
+axios.put(this.url + '/zip', data, { responseType: 'blob' })
 ```
 
 8. Fetch请求可以直接在控制台调用
@@ -285,6 +289,15 @@ import FileDownload from 'react-file-download'
 
 9. [Element.scrollIntoView() 方法让当前的元素滚动到浏览器窗口的可视区域内](https://www.jianshu.com/p/32bef36a68a0)
 
+10. [next.js中的window is not defined](https://blog.csdn.net/qq_35087256/article/details/84963644):next.js文档中提供了一种动态导入模块的办法'next/dynamic'
+
+11. url-loader和file-loader
+   1. url-loader依赖file-loader
+   2. 当使用url-loader加载图片，图片大小小于上限值，则将图片转base64字符串；否则使用file-loader加载图片，都是为了提高浏览器加载图片速度。
+   3. 使用url-loader加载图片比file-loader更优秀
+
+15. [js实现窗口全屏示例](https://blog.csdn.net/u011500781/article/details/52896368):无URL、导航栏等
+
 ## HTML
 
 ## CSS
@@ -303,11 +316,17 @@ import FileDownload from 'react-file-download'
     }
 ```
 
+2. [【CSS深入理解之z-index】听课总结](https://www.cnblogs.com/benbendu/p/5811534.html)
+
 ## 其他
 1. [Chrome浏览器百度云倍速播放](https://blog.csdn.net/u013044310/article/details/80444695)：
-```
-videojs.getPlayers("video-player").html5player.tech_.setPlaybackRate(1.5)
-```
+    ```
+    videojs.getPlayers("video-player").html5player.tech_.setPlaybackRate(1.5)
+    ```
+
+2. [百度网盘直链下载助手](https://github.com/syhyz1990/baiduyun)(亲测有效)
+
+3. [3个方法解决百度网盘限速 （2019-07-04 更新）](https://www.runningcheese.com/baiduyun)
 
 # 代码规范/规约
 1. [EditorConfig](https://editorconfig.org/): 当多人团队进行一个项目开发时，每个人可能喜欢的编辑器不同，有人喜欢Webstrom、有人喜欢sublime、还有人喜欢Hbuilder。这个时候，问题便迎面而来，如何使使用不同编辑器的开发者能够轻松惬意的遵守最基本的代码规范呢？   
@@ -354,3 +373,13 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
 1. [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
 2. [理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
 3. [Service Worker](https://www.jianshu.com/p/62338c038c42)
+4. [Nginx详解](https://www.cnblogs.com/ysocean/category/1289968.html)
+
+
+# 个人web页面构想(非静态)
+1. 登录授权隐私内容/非登录
+2. 图片/游记展示
+3. 文档/博客/学习笔记展示
+4. 文档的增/删/改/查
+5. 爱好展示
+6. 访问量统计
