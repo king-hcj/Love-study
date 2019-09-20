@@ -292,11 +292,15 @@ axios.put(this.url + '/zip', data, { responseType: 'blob' })
 10. [next.js中的window is not defined](https://blog.csdn.net/qq_35087256/article/details/84963644):next.js文档中提供了一种动态导入模块的办法'next/dynamic'
 
 11. url-loader和file-loader
-   1. url-loader依赖file-loader
-   2. 当使用url-loader加载图片，图片大小小于上限值，则将图片转base64字符串；否则使用file-loader加载图片，都是为了提高浏览器加载图片速度。
-   3. 使用url-loader加载图片比file-loader更优秀
+   - url-loader依赖file-loader
+   - 当使用url-loader加载图片，图片大小小于上限值，则将图片转base64字符串；否则使用file-loader加载图片，都是为了提高浏览器加载图片速度。
+   - 使用url-loader加载图片比file-loader更优秀
 
-15. [js实现窗口全屏示例](https://blog.csdn.net/u011500781/article/details/52896368):无URL、导航栏等
+12. [js实现窗口全屏示例](https://blog.csdn.net/u011500781/article/details/52896368):无URL、导航栏等
+
+13. [如何实现图片缩放?](https://bbs.aliyun.com/read/541396.html):将图片按照要求生成缩略图，或者进行特定的缩放(阿里云)
+
+14. 数字分割：[JavaScript之如何让数字千位分割](https://blog.csdn.net/spicyboiledfish/article/details/77776357) | [JS 数字，金额 用逗号 隔开](https://blog.csdn.net/evangel_z/article/details/12839657)
 
 ## HTML
 
