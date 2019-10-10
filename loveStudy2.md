@@ -266,7 +266,10 @@ import FileDownload from 'react-file-download'
 ```
 下载文件时，很可能需要写responseType,否则可能打不开文件：
 ```
-axios.put(this.url + '/zip', data, { responseType: 'blob' })
+axios.put(this.url + '/zip', data, {
+    responseType: 'blob',
+    headers: { 'x-access-token': localStorage.token }
+  })
 ```
 
 8. Fetch请求可以直接在控制台调用
@@ -301,6 +304,23 @@ axios.put(this.url + '/zip', data, { responseType: 'blob' })
 13. [如何实现图片缩放?](https://bbs.aliyun.com/read/541396.html):将图片按照要求生成缩略图，或者进行特定的缩放(阿里云)
 
 14. 数字分割：[JavaScript之如何让数字千位分割](https://blog.csdn.net/spicyboiledfish/article/details/77776357) | [JS 数字，金额 用逗号 隔开](https://blog.csdn.net/evangel_z/article/details/12839657)
+
+15. [arguments对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments):
+>>>arguments对象不是一个 Array 。它类似于Array，但除了length属性和索引元素之外没有任何Array属性。例如，它没有 pop 方法。但是它可以被转换为一个真正的Array：
+```
+var args = Array.prototype.slice.call(arguments);
+var args = [].slice.call(arguments);
+
+// ES2015
+const args = Array.from(arguments);
+const args = [...arguments];
+```
+
+16. momentJS问题：
+   - [东八区问题 moment().format() 有时间差](https://blog.csdn.net/ASZJBGD/article/details/85252658)
+   - [解决Moment格式化时间出现时区差的问题](https://blog.csdn.net/littlebearGreat/article/details/80996346)
+
+
 
 ## HTML
 
