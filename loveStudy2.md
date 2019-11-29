@@ -320,6 +320,22 @@ const args = [...arguments];
    - [东八区问题 moment().format() 有时间差](https://blog.csdn.net/ASZJBGD/article/details/85252658)
    - [解决Moment格式化时间出现时区差的问题](https://blog.csdn.net/littlebearGreat/article/details/80996346)
 
+17. url出现了有+，空格，/，?，%，#，&，=等特殊符号的时候，可能在服务器端无法获得正确的参数值（当参数中含有”#”这些等对于URI而言有着特殊含义的符号时，发现“#”字符后面的信息全被裁掉了）:
+   - 在拼接参数的时候，使用 encodeURIComponent() 进行手动转义：
+      ```
+      var url = "xxx?name=" + encodeURIComponent( "wz#aa" );
+      ```
+   - 用其他字符替换，如：
+        ```
+          var str = '少林寺3#101';
+          var result = str.replace(/#/g, '%23');
+        ```
+
+18. ant design Tooltip文字提示的样式设置
+   - 可以通过设置mouseLeaveDelay控制Tooltip在页面的时间，然后chrome就可以查看元素了；
+   - 直接用  ant-tooltip-  在页面并无法修改它的样式；
+   - 通过自定义的类名以及类名下的标签就可以修改其样式,如下所示
+   ![ant design Tooltip文字提示的样式设置](./image/tooltip.png)
 
 
 ## HTML
