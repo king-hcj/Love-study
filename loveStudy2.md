@@ -331,7 +331,7 @@ const args = [...arguments];
           var result = str.replace(/#/g, '%23');
         ```
 
-18. ant design Tooltip文字提示的样式设置
+18. [ant design Tooltip文字提示的样式设置](https://www.jianshu.com/p/27bb9a9d4f03)
    - 可以通过设置mouseLeaveDelay控制Tooltip在页面的时间，然后chrome就可以查看元素了；
    - 直接用  ant-tooltip-  在页面并无法修改它的样式；
    - 通过自定义的类名以及类名下的标签就可以修改其样式,如下所示
