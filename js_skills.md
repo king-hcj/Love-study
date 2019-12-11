@@ -46,3 +46,17 @@
     counter();
     console.log(counter.count); // 2
    ```
+
+2. 语音播报
+- 在项目中需要对ajax请求返回的消息进行语音播报,str 为返回的data
+    ```
+    //语音播报
+    function voiceAnnouncements(str){
+        //百度
+        var url = "http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&text=" + encodeURI(str);        // baidu
+        var n = new Audio(url);
+        n.src = url;
+        n.play();
+    }
+    voiceAnnouncements('你好，今天吃的什么？')
+    ```
