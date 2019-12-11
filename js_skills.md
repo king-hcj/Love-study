@@ -60,3 +60,5 @@
     }
     voiceAnnouncements('你好，今天吃的什么？')
     ```
+
+- [React Native Text-To-Speech library for Android and iOS](https://github.com/ak1394/react-native-tts)
