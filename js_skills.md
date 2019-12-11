@@ -47,7 +47,7 @@
     console.log(counter.count); // 2
    ```
 
-2. 语音播报
+2. 前端语音
 - 在项目中需要对ajax请求返回的消息进行语音播报,str 为返回的data
     ```
     //语音播报
@@ -62,3 +62,8 @@
     ```
 
 - [React Native Text-To-Speech library for Android and iOS](https://github.com/ak1394/react-native-tts)
+
+- 语音识别:
+    - [annyang](https://github.com/TalAter/annyang):
+    A tiny JavaScript Speech Recognition library that lets your users control your site with voice commands.   
+annyang has no dependencies, weighs just 2 KB, and is free to use and modify under the MIT license.
