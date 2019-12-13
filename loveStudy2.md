@@ -359,7 +359,24 @@ const args = [...arguments];
    - 直接用  ant-tooltip-  在页面并无法修改它的样式；
    - 通过自定义的类名以及类名下的标签就可以修改其样式,如下所示:
    (先给Tooltip添加一个overlayClassName={styles['tooltip-custom']})
-   ![ant design Tooltip文字提示的样式设置](./image/tooltip.png)
+   ![ant design Tooltip文字提示的样式设置](./image/tooltip.png)   
+   例： tooltip 黑色背景改成白色不透明
+      ```
+        .tooltip-custom {
+          div {
+            div {
+              &:first-child {
+                display: none;
+              }
+        
+              &:last-child {
+                padding: 0px;
+                background-color: rgba(255, 255, 255, 1);
+              }
+            }
+          }
+        }
+      ```
 
 4. React行内calc的使用：style={{ width: 'calc(100% - 80px)' }}
 
