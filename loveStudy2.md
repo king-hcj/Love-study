@@ -450,3 +450,7 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
 4. 文档的增/删/改/查
 5. 爱好展示
 6. 访问量统计
+7. 基于jekyll-now的个人博客解决方案
+   - [jekyll-now](https://github.com/barryclark/jekyll-now)
+   - [参考页面](https://github.com/mzlogin/mzlogin.github.io)
+   - [主题选择](http://jekyllthemes.org/)
