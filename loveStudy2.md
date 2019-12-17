@@ -333,6 +333,16 @@ const args = [...arguments];
 
 18. antD Form组件中，Form.Item中有带htmlType='submit'属性的Button时，会导致在Form中回车提交表单，删除htmlType='submit'，然后给Button加一个提交的onClick事件即可；
 
+19. JS中为什么['1','7','11'].map(parseInt)返回[1,NaN,3]?
+   - map返回3个参数，item，index，Array，所以[1,7,11].map(console.log)打印：
+      ```
+      1 0 (3) [1, 7, 11]
+      7 1 (3) [1, 7, 11]
+      11 2 (3) [1, 7, 11]
+      ```
+   - parseInt接受两个参数：string，radix，其中radix默认为10；每次调用parseInt，相当于：parseInt(item,index,Array),map传递的第三个参数Array会被忽略,index为0时取默认值10；parseInt(7,1)中，7在1进制中不存在。
+> 参考：[JS 中为啥 ['1', '7', '11'].map(parseInt) 返回 [1, NaN, 3]](https://mp.weixin.qq.com/s/h-hxPt1yN2shq-Dkq6S3dA)
+
 
 ## HTML
 
