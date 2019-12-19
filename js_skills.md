@@ -67,3 +67,10 @@
     - 语音控制网站 [annyang](https://github.com/TalAter/annyang):
     A tiny JavaScript Speech Recognition library that lets your users control your site with voice commands.   
 annyang has no dependencies, weighs just 2 KB, and is free to use and modify under the MIT license.
+
+3. 数组展开的N种方法
+   - 循环加递归
+   - flat
+   - flatMap
+   - toString后split
+   - join后split
