@@ -343,7 +343,8 @@ const args = [...arguments];
    - parseInt接受两个参数：string，radix，其中radix默认为10；每次调用parseInt，相当于：parseInt(item,index,Array),map传递的第三个参数Array会被忽略,index为0时取默认值10；parseInt(7,1)中，7在1进制中不存在。
 > 参考：[JS 中为啥 ['1', '7', '11'].map(parseInt) 返回 [1, NaN, 3]](https://mp.weixin.qq.com/s/h-hxPt1yN2shq-Dkq6S3dA)
 
-20. [MessageChannel是什么，怎么使用？](https://www.jianshu.com/p/4f07ef18b5d7)：MessageChannel的postMessage传递的数据也是深拷贝的，这和web worker的postMessage一样，而且还可以拷贝undefined和循环引用的对象。
+20. [MessageChannel是什么，怎么使用？](https://www.jianshu.com/p/4f07ef18b5d7)：MessageChannel的postMessage传递的数据也是深拷贝的，这和web worker的postMessage一样，而且还可以拷贝undefined和循环引用的对象,如下所示：   
+MessageChannel创建了一个通信的管道，这个管道有两个端口，每个端口都可以通过postMessage发送数据，而一个端口只要绑定了onmessage回调方法，就可以接收从另一个端口传过来的数据。
     ```
     function structuralClone(obj) {
       return new Promise(resolve => {
