@@ -493,3 +493,13 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
    - [jekyll-now](https://github.com/barryclark/jekyll-now)
    - [参考页面](https://github.com/mzlogin/mzlogin.github.io)
    - [主题选择](http://jekyllthemes.org/)
+
+# 2020 年OKR关注点
+   - 基于原生JS、HTML、CSS开发的能力
+   - 基于**NodeJS**的全栈开发能力
+   - 基于React Native、Flutter、小程序的移动端开发能力
+   - React和Vue底层原理、思想、源码的阅读学习
+   - **性能优化、网络安全、网络协议、操作系统、编译原理、SQL、计算机组成原理、数据结构和算法、数学能力**
+   - 项目构建能力，持续集成、持续交付能力
+   - 前沿技术动态的把控
+   - **知识输出能力和个人前端体系的构建**
